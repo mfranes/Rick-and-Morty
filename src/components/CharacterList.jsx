@@ -1,4 +1,3 @@
-import '../styles/CharaterList.css';
 import CharacterCard from './CharacterCard.jsx';
 
 function CharacterList() {

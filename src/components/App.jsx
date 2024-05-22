@@ -1,3 +1,4 @@
+import '../styles/App.scss';
 import CharacterList from './CharacterList.jsx';
 
 function App() {

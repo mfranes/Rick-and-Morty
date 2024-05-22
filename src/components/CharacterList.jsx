@@ -1,4 +1,5 @@
 import '../styles/CharaterList.css';
+import CharacterCard from './CharacterCard.jsx';
 
 function CharacterList() {
     return (
@@ -6,17 +7,9 @@ function CharacterList() {
             {/* https://rickandmortyapi.com/api/character */}
             CharacterList
 
-            <article className='characterCard'>
-                <div>Picture1</div>
-                <div>Name1</div>
-                <div>Specie1</div>
-            </article>
+            <CharacterCard />
 
-            <article className="characterCard">
-                <div>Picture2</div>
-                <div>Name2</div>
-                <div>Specie2</div>
-            </article>
+            <CharacterCard />
 
         </section>
     )

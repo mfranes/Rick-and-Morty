@@ -1,4 +1,4 @@
-import '../styles/CharaterList.scss';
+import '../styles/CharacterCard.scss';
 
 function CharacterCard() {
 

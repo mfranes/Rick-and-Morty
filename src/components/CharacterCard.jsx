@@ -2,9 +2,9 @@ function CharacterCard() {
 
     return (
         <article className='characterCard'>
-            <div>Picture1</div>
-            <div>Name1</div>
-            <div>Specie1</div>
+            <img src={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"} />
+            <div>Rick Sanchez</div>
+            <div>Human</div>
         </article>
     );
 }

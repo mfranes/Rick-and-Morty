@@ -9,10 +9,21 @@ function Filters({handleNameFilterChange}) {
         handleNameFilterChange(value);
     };
 
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+        }
+    };
+
     return (
         <section className='filtersSection'>
             <form className='filtersSection__searchCharacter'>
-                <input type='text' id='searchCharacterInput' className='filtersSection__searchCharacter--input' onChange={handleInputChange}/>
+                <input type='text'
+                       id='searchCharacterInput'
+                       className='filtersSection__searchCharacter--input'
+                       onChange={handleInputChange}
+                       onKeyDown={handleKeyDown}
+                />
             </form>
         </section>
     );

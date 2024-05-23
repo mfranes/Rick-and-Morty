@@ -1,7 +1,12 @@
 .filtersSection {
+  //border: 2px solid chartreuse;
+  width: 80vw;
   margin-bottom: 30px;
 
   &__searchCharacter {
+    display: flex;
+    justify-content: center;
+
     &--input {
       width: 500px;
       border: 1px solid var(--rickMortyBlue);

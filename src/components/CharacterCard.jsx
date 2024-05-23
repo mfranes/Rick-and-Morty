@@ -4,7 +4,7 @@ function CharacterCard() {
 
     return (
         <article className='characterCard'>
-            <img src={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"} />
+            <img src={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"}  />
             <div className='characterCard__description'>
                 <div>Rick Sanchez</div>
                 <div>Human</div>

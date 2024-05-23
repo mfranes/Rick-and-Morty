@@ -1,0 +1,9 @@
+.characterList {
+  //border: 2px solid blue;
+  width: 80vw;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+  gap: 15px;
+}

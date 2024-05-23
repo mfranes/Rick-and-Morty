@@ -1,7 +1,6 @@
 import '../styles/App.scss';
-import CharacterList from './CharacterList.jsx';
-import Filters from './Filters.jsx';
 import Header from './Header.jsx';
+import Main from './Main.jsx';
 
 function App() {
 
@@ -9,9 +8,8 @@ function App() {
     <>
         <Header />
 
-        <Filters />
+        <Main />
 
-        <CharacterList />
 
         <section>
             CharacterDetail
@@ -20,4 +18,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -1,14 +1,24 @@
 import '../styles/App.scss';
 import Header from './Header.jsx';
 import Main from './Main.jsx';
+import getAllCharacters from '../services/rickAndMortyApi.js';
+import {useEffect, useState} from 'react';
 
 function App() {
+    const [characters, setCharacters] = useState([]);
 
-  return (
+    useEffect(() => {
+        getAllCharacters().then(response => {
+            setCharacters(response);
+        });
+    }, []);
+
+
+    return (
     <>
         <Header />
 
-        <Main />
+        <Main characters={characters} />
 
 
         <section>

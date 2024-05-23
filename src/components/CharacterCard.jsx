@@ -1,16 +1,23 @@
 import '../styles/CharacterCard.scss';
+import PropTypes from 'prop-types';
 
-function CharacterCard() {
+function CharacterCard({image, name, specie}) {
 
     return (
         <article className='characterCard'>
-            <img src={"https://rickandmortyapi.com/api/character/avatar/1.jpeg"}  />
+            <img src={image}  alt={`${name} image`}/>
             <div className='characterCard__description'>
-                <div className='characterCard__description__name'>Rick Sanchez</div>
-                <div className='characterCard__description__specie'>Human</div>
+                <div className='characterCard__description__name'>{name}</div>
+                <div className='characterCard__description__specie'>{specie}</div>
             </div>
         </article>
     );
 }
+
+CharacterCard.propTypes = {
+    image: PropTypes.string,
+    name: PropTypes.string,
+    specie: PropTypes.string,
+};
 
 export default CharacterCard;

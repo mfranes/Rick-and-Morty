@@ -6,6 +6,10 @@
         text-decoration: none;
     }
 
+    &__image {
+        vertical-align: middle;
+    }
+
     &__description {
         background-color: var(--rickMortyBlue);
         color: white;

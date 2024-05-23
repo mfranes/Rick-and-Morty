@@ -1,6 +1,7 @@
 const getAllCharacters = () => {
     // https://rickandmortyapi.com/api/character
-    return fetch('https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json')
+    // https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json
+    return fetch('https://rickandmortyapi.com/api/character')
         .then((resp) => resp.json())
         .then((data) => {
             return data.results.map((result) => {

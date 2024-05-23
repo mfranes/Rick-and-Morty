@@ -23,7 +23,7 @@ function CharacterList({characters, nameFilterValue}) {
 
     return (
         <section className='characterList'>
-            {characters.length === 0 ? (
+            {characters.length === 0 && nameFilterValue.length > 0 ? (
                 <p style={{color: 'white'}}>No hay ningún personaje que coincida con la palabra {nameFilterValue}</p>
             ) : (
                 characterCards

@@ -7,7 +7,7 @@ function CharacterCard({character}) {
     return (
         <article className='characterCard'>
             <Link className={'characterCard__link'} to={`/character/${character.id}`}>
-                <img src={character.image} alt={`${character.name} image`}/>
+                <img className='characterCard__image' src={character.image} alt={`${character.name} image`}/>
                 <div className='characterCard__description'>
                     <div className='characterCard__description__name'>{character.name}</div>
                     <div className='characterCard__description__species'>{character.species}</div>

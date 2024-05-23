@@ -13,7 +13,7 @@ function CharacterDetails({character}) {
                 </Link>
             </div>
             <article className='characterDetailsSection__card'>
-                <img src='https://raw.githubusercontent.com/Adalab/rick-y-morty/master/assets/img/1.jpeg' />
+                <img src={character.image} alt={`${character.name} image`}/>
                 <div className='characterDetailsSection__card__text'>
                     <p className='characterDetailsSection__card__text__name'>{character.name}</p>
                     <p>Status: {character.status}</p>

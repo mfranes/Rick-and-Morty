@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 
 function CharacterDetails({character}) {
+    if (!character) {
+        return <p style={{color: 'white'}}>El personaje que buscas no existe</p>;
+    }
 
     return (
         <section className='characterDetailsSection'>

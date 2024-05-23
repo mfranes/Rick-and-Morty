@@ -12,7 +12,8 @@ function App() {
 
     useEffect(() => {
         getAllCharacters().then(response => {
-            setCharacters(response);
+            const sortedResponse = [...response].sort((a, b) => a.name.localeCompare(b.name));
+            setCharacters(sortedResponse);
         });
     }, []);
 
@@ -25,6 +26,7 @@ function App() {
             return character.name.toLowerCase().includes(nameFilterValue.toLowerCase());
         });
     };
+
 
     const { pathname } = useLocation()
     const characterRoute = matchPath("/character/:id", pathname)

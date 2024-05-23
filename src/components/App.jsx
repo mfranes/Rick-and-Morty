@@ -1,8 +1,8 @@
 import '../styles/App.scss';
 import Header from './Header.jsx';
-import Main from './Main.jsx';
 import getAllCharacters from '../services/rickAndMortyApi.js';
 import {useEffect, useState} from 'react';
+import CharacterDetails from './CharacterDetails.jsx';
 
 function App() {
     const [characters, setCharacters] = useState([]);
@@ -29,12 +29,9 @@ function App() {
     <>
         <Header />
 
-        <Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />
+        {/*<Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />*/}
+        <CharacterDetails />
 
-
-        <section>
-            CharacterDetail
-        </section>
     </>
   )
 }

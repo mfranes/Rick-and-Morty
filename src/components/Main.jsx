@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 function Main({characters, nameFilterValue, handleNameFilterChange}) {
     return (
         <main className="main">
-            <Filters handleNameFilterChange={handleNameFilterChange}/>
+            <Filters handleNameFilterChange={handleNameFilterChange} nameFilterValue={nameFilterValue} />
 
             <CharacterList
                 characters={characters}

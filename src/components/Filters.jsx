@@ -1,7 +1,7 @@
 import '../styles/Filters.scss';
 import PropTypes from 'prop-types';
 
-function Filters({handleNameFilterChange}) {
+function Filters({handleNameFilterChange, nameFilterValue}) {
 
     const handleInputChange = (event) => {
         event.preventDefault();
@@ -21,6 +21,7 @@ function Filters({handleNameFilterChange}) {
                 <input type='text'
                        id='searchCharacterInput'
                        className='filtersSection__searchCharacter--input'
+                       value={nameFilterValue}
                        onChange={handleInputChange}
                        onKeyDown={handleKeyDown}
                 />
@@ -30,7 +31,8 @@ function Filters({handleNameFilterChange}) {
 }
 
 Filters.propTypes = {
-    handleNameFilterChange: PropTypes.func
+    handleNameFilterChange: PropTypes.func,
+    nameFilterValue: PropTypes.string
 };
 
 export default Filters;

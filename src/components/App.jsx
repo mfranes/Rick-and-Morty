@@ -27,8 +27,8 @@ function App() {
     };
 
     const { pathname } = useLocation()
-    const userRoute = matchPath("/character/:id", pathname)
-    const urlCharacterId = userRoute ? userRoute.params.id : null;
+    const characterRoute = matchPath("/character/:id", pathname)
+    const urlCharacterId = characterRoute ? characterRoute.params.id : null;
     const selectedCharacter = characters.find(character => character.id === urlCharacterId)
 
     return (

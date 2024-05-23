@@ -3,12 +3,15 @@ const getAllCharacters = () => {
     return fetch('https://raw.githubusercontent.com/Adalab/rick-y-morty/master/data/rick-y-morty.json')
         .then((resp) => resp.json())
         .then((data) => {
-            return data.results.map((character) => {
+            return data.results.map((result) => {
                 return {
-                    id: character.id,
-                    name: character.name,
-                    specie: character.species,
-                    image: character.image,
+                    id: `${result.id}`,
+                    name: result.name,
+                    status: result.status,
+                    specie: result.species,
+                    image: result.image,
+                    origin: result.origin.name,
+                    numberOfepisodes: result.episode.length
                 };
             });
         });

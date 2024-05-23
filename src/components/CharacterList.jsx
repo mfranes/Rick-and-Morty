@@ -12,9 +12,7 @@ function CharacterList({characters}) {
             return characters.map(character => {
                 return <CharacterCard
                     key={character.id}
-                    image={character.image}
-                    name={character.name}
-                    specie={character.specie}
+                    character={character}
                 />
             });
         };

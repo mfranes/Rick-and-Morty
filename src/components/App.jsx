@@ -3,6 +3,8 @@ import Header from './Header.jsx';
 import getAllCharacters from '../services/rickAndMortyApi.js';
 import {useEffect, useState} from 'react';
 import CharacterDetails from './CharacterDetails.jsx';
+import {matchPath, Route, Routes, useLocation} from 'react-router-dom';
+import Main from './Main.jsx';
 
 function App() {
     const [characters, setCharacters] = useState([]);
@@ -24,14 +26,27 @@ function App() {
         });
     };
 
+    const { pathname } = useLocation()
+    const userRoute = matchPath("/character/:id", pathname)
+    const urlCharacterId = userRoute ? userRoute.params.id : null;
+    const selectedCharacter = characters.find(character => character.id === urlCharacterId)
 
     return (
     <>
         <Header />
-
-        {/*<Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />*/}
-        <CharacterDetails />
-
+        <Routes>
+            <Route path="/" element={
+                <>
+                    <Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />
+                </>
+            }
+            />
+            <Route path="/character/:id" element={
+                <CharacterDetails character={selectedCharacter}/>
+            }
+            />
+            <Route path="*" element={<h2 style={{color: 'white'}}> Pagina no encontrada</h2>} />
+        </Routes>
     </>
   )
 }

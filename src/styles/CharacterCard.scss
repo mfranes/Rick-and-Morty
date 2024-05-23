@@ -2,10 +2,13 @@
     //border: 5px solid rosybrown;
     width: 300px;
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__description {
         background-color: var(--rickMortyBlue);
         color: white;
-        //height: 40px;
         padding: 10px;
 
         &__name {

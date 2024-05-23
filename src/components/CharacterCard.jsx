@@ -1,23 +1,24 @@
 import '../styles/CharacterCard.scss';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
-function CharacterCard({image, name, specie}) {
+function CharacterCard({character}) {
 
     return (
         <article className='characterCard'>
-            <img src={image}  alt={`${name} image`}/>
-            <div className='characterCard__description'>
-                <div className='characterCard__description__name'>{name}</div>
-                <div className='characterCard__description__specie'>{specie}</div>
-            </div>
+            <Link className={'characterCard__link'} to={`/character/${character.id}`}>
+                <img src={character.image} alt={`${character.name} image`}/>
+                <div className='characterCard__description'>
+                    <div className='characterCard__description__name'>{character.name}</div>
+                    <div className='characterCard__description__specie'>{character.specie}</div>
+                </div>
+            </Link>
         </article>
     );
 }
 
 CharacterCard.propTypes = {
-    image: PropTypes.string,
-    name: PropTypes.string,
-    specie: PropTypes.string,
+    character: PropTypes.object
 };
 
 export default CharacterCard;

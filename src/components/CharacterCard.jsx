@@ -10,7 +10,7 @@ function CharacterCard({character}) {
                 <img src={character.image} alt={`${character.name} image`}/>
                 <div className='characterCard__description'>
                     <div className='characterCard__description__name'>{character.name}</div>
-                    <div className='characterCard__description__specie'>{character.specie}</div>
+                    <div className='characterCard__description__species'>{character.species}</div>
                 </div>
             </Link>
         </article>

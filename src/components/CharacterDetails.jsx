@@ -17,7 +17,7 @@ function CharacterDetails({character}) {
                 <div className='characterDetailsSection__card__text'>
                     <p className='characterDetailsSection__card__text__name'>{character.name}</p>
                     <p>Status: {character.status}</p>
-                    <p>Specie: {character.specie}</p>
+                    <p>Species: {character.species}</p>
                     <p>Origin: {character.origin}</p>
                     <p>Episodes: {character.numberOfepisodes}</p>
                 </div>

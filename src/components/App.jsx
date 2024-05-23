@@ -37,7 +37,10 @@ function App() {
         <Routes>
             <Route path="/" element={
                 <>
-                    <Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />
+                    <Main characters={filteredCharacters()}
+                          nameFilterValue={nameFilterValue}
+                          handleNameFilterChange={handleNameFilterChange}
+                    />
                 </>
             }
             />
@@ -45,7 +48,7 @@ function App() {
                 <CharacterDetails character={selectedCharacter}/>
             }
             />
-            <Route path="*" element={<h2 style={{color: 'white'}}> Pagina no encontrada</h2>} />
+            <Route path="*" element={<h2 style={{color: 'white'}}>Página no encontrada</h2>} />
         </Routes>
     </>
   )

@@ -8,7 +8,7 @@ const getAllCharacters = () => {
                     id: `${result.id}`,
                     name: result.name,
                     status: result.status,
-                    specie: result.species,
+                    species: result.species,
                     image: result.image,
                     origin: result.origin.name,
                     numberOfepisodes: result.episode.length

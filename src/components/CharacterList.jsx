@@ -1,10 +1,10 @@
 import CharacterCard from './CharacterCard.jsx';
 import '../styles/CharacterList.scss';
-import PropTypes from 'prop-types';
+import PropTypes, * as propTypes from 'prop-types';
 import {useEffect, useState} from 'react';
 
 
-function CharacterList({characters}) {
+function CharacterList({characters, nameFilterValue}) {
     const [characterCards, setCharacterCards] = useState([]);
 
     useEffect(() => {
@@ -23,13 +23,18 @@ function CharacterList({characters}) {
 
     return (
         <section className='characterList'>
-            {characterCards}
+            {characters.length === 0 ? (
+                <p style={{color: 'white'}}>No hay ningún personaje que coincida con la palabra {nameFilterValue}</p>
+            ) : (
+                characterCards
+            )}
         </section>
     )
 }
 
 CharacterList.propTypes = {
-    characters: PropTypes.array
+    characters: PropTypes.array,
+    nameFilterValue: propTypes.string
 };
 
 export default CharacterList;

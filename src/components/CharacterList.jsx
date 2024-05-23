@@ -4,12 +4,9 @@ function CharacterList() {
     return (
         <section>
             {/* https://rickandmortyapi.com/api/character */}
-            CharacterList
-
             <CharacterCard />
 
             <CharacterCard />
-
         </section>
     )
 }

@@ -1,14 +1,13 @@
 import '../styles/App.scss';
 import CharacterList from './CharacterList.jsx';
 import Filters from './Filters.jsx';
+import Header from './Header.jsx';
 
 function App() {
 
   return (
     <>
-        <header>
-            Logo Rick and Morty
-        </header>
+        <Header />
 
         <Filters />
 

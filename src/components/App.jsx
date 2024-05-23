@@ -6,6 +6,7 @@ import {useEffect, useState} from 'react';
 
 function App() {
     const [characters, setCharacters] = useState([]);
+    const [nameFilterValue, setNameFilterValue] = useState('');
 
     useEffect(() => {
         getAllCharacters().then(response => {
@@ -13,12 +14,22 @@ function App() {
         });
     }, []);
 
+    const handleNameFilterChange = (value) => {
+        setNameFilterValue(value);
+    };
+
+    const filteredCharacters = () => {
+        return characters.filter(character => {
+            return character.name.toLowerCase().includes(nameFilterValue.toLowerCase());
+        });
+    };
+
 
     return (
     <>
         <Header />
 
-        <Main characters={characters} />
+        <Main characters={filteredCharacters()} handleNameFilterChange={handleNameFilterChange} />
 
 
         <section>

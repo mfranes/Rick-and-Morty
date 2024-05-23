@@ -4,18 +4,19 @@ import '../styles/Main.scss';
 import PropTypes from 'prop-types';
 
 
-function Main({characters}) {
+function Main({characters, handleNameFilterChange}) {
     return (
         <main className="main">
-            <Filters />
+            <Filters handleNameFilterChange={handleNameFilterChange}/>
 
-            <CharacterList characters={characters} />
+            <CharacterList characters={characters}/>
         </main>
     );
 }
 
 Main.propTypes = {
-    characters: PropTypes.array
+    characters: PropTypes.array,
+    handleNameFilterChange: PropTypes.func
 };
 
 export default Main;

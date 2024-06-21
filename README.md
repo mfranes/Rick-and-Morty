@@ -1,4 +1,4 @@
-# Módulo 3: Ejercicio de evaluación final
+Rick And Morty
 
 Este proyecto consiste en una página que lista los personajes de la serie de televisión Rick And Morty.
 En el listado, cada personaje cuenta con una tarjeta que incluye su imagen, su nombre y su especie.
